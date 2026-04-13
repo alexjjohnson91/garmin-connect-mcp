@@ -1,0 +1,27 @@
+[project]
+name = "garmin-connect-mcp"
+version = "0.1.0"
+description = "garmin connect mcp"
+authors = [
+    {name = "Alex Johnson", email = "alexjjohnson91@gmail.com"},
+]
+dependencies = [
+    "mcp>=1.27.0",
+    "playwright>=1.40.0",
+    "python-dotenv>=1.0.0",
+]
+requires-python = ">=3.10"
+readme = "README.md"
+license = {text = "MIT"}
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+
+[project.scripts]
+garmin-connect-mcp = "garmin_connect_mcp.server:main"
+garmin-auth = "garmin_connect_mcp.auth:main"
+
+[tool.pdm]
+distribution = true
